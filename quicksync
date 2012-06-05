@@ -5,23 +5,24 @@ import subprocess
 import platform
 import argparse
 
+FOLDER_SEP = ';'
 RSYNC_OPTIONS = '-v -r -a --exclude=.svn --exclude=*.qs'
 RSYNC_CMD = 'rsync %(OPTIONS)s %(FROM)s %(TO)s'
 
 IS_WINDOWS = platform.uname()[0]=='Windows'
 
 def fix_folder(folder):
-    folder = os.path.normpath(folder)+'/'
+    folder = os.path.normpath(folder)
     if IS_WINDOWS:
        split = folder.split(':')
        folder = '/cygdrive/%s%s' % (split[0], split[1])
-    return folder
+    return folder+'/'
 
 def get_folders(filename):
     folders = []
     fh = open(filename,'r')
     for line in fh.readlines():
-        l = line.split()
+        l = line.split(FOLDER_SEP)
         folders.append((fix_folder(l[0]), fix_folder(l[1])))
     return folders
 
