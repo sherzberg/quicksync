@@ -1,4 +1,3 @@
-
 ================
 quicksync
 ================
@@ -33,6 +32,8 @@ Create a file called folders-to-sync.qs with these contents:
 ::
 
     /path/to/folder/to/sync;/path/to/folder/to/sync/to
+
+Then to sync the folders, execute this:
 
 ::
 
