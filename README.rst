@@ -5,13 +5,16 @@ v.1 - 2012-04-06
 ----------------
 
 This is a simple command line application that aids in syncing folders using
-rsync. The input is a file that contains the folders to sync. Can be setup to run
-with cron.
+rsync. The input is a file that contains the folders to sync. Folders must
+be mounted locally. The current testing environment syncs local folders to
+smb mounted shares.
+
+Can (should?) be setup to run with cron.
 
 Requirements
 ============
 
-quicksync is testing with (may work with other versions):
+quicksync is tested with (may work with other versions):
 
 * Python 2.7.3
 * rsync 3.0.9
