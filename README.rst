@@ -25,7 +25,7 @@ will be comming in future releases**
 Features (that currently work):
 ===============================
 
-* Multi-folder sync (local folders only)
+* Multi-folder sync (locally mounted folders only)
 
 Usage
 =====
