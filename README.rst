@@ -4,12 +4,12 @@ quicksync
 v.1 - 2012-04-06
 ----------------
 
-This is a simple command line application that aids in syncing folders using
+This is a simple command line wrapper application that aids in syncing folders using
 rsync. The input is a file that contains the folders to sync. Folders must
 be mounted locally. The current testing environment syncs local folders to
 smb mounted shares.
 
-Can (should?) be setup to run with cron.
+Can be setup to run with cron.
 
 Requirements
 ============
@@ -25,7 +25,7 @@ will be comming in future releases**
 Features (that currently work):
 ===============================
 
-* Multi-folder sync
+* Multi-folder sync (local folders only)
 
 Usage
 =====
