@@ -27,7 +27,7 @@ Features (that currently work):
 Usage
 =====
 
-Create a file called folders-to-sync.qs with these contents:
+Create a file called ~/folders-to-sync.qs with these contents:
 
 ::
 
