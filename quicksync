@@ -23,15 +23,17 @@ def get_folders(filename):
     fh = open(filename,'r')
     for line in fh.readlines():
         l = line.split(FOLDER_SEP)
-        folders.append((fix_folder(l[0]), fix_folder(l[1])))
+        folders.append((fix_folder(l[0].strip()), fix_folder(l[1].strip())))
     return folders
 
 def do_sync(folders):
     for tup in folders:
         f, t = tup[0], tup[1]
+        print 'Syncing %s to %s' %(f, t)
         cmd = build_command(f, t)
-        print cmd
+        #print cmd
         subprocess.call(cmd, shell=True)
+        print '-----------------------------------------'
 
 def build_command(f, t):
 #    if SIMULATE: RSYNC_OPTIONS = '-n '+RSYNC_OPTIONS
