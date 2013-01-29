@@ -31,7 +31,7 @@ Usage
 =====
 
 The configuration file is like an INI file. More to come later 
-Create a file called ~/folders-to-sync.qs with these contents:
+Create a file called ~/folders-to-sync.cfg with these contents:
 
 ::
 
@@ -43,5 +43,5 @@ Then to sync the folders, execute this:
 
 ::
 
-    $ bin/quicksync -c ~/folders-to-sync.qs
+    $ bin/quicksync -c ~/folders-to-sync.cfg
 
