@@ -30,13 +30,21 @@ Features (that currently work):
 Installation
 ============
 
-Use this method unless you are using pip. If you are using pip, you probably
-know how to install this...
-
 ::
 
     $ git clone git@github.com:whelmingbytes/quicksync.git
     $ cd quicksync
+
+If using pip:
+
+::
+
+    $ pip install .
+
+If not using pip:
+
+::
+
     $ python setup.py install
 
 Usage
