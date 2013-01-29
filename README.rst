@@ -50,7 +50,7 @@ If not using pip:
 Usage
 =====
 
-The configuration file is like an INI file. More to come later 
+The configuration file is like an INI file. More options to come later. 
 Create a file called ~/folders-to-sync.cfg with these contents:
 
 ::
