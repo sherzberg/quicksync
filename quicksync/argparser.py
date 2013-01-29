@@ -13,7 +13,10 @@ class QuickSyncArgumentParser(ArgumentParser):
         folder to another''')
 
         self.add_argument(
-                'configfile', 
+                '-c',
+                '--configfile',
+                default='quicksync.cfg',
+                type=file,
                 help='''config file to read sync info from'''
                 )
         self.add_argument(

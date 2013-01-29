@@ -45,7 +45,9 @@ if __name__ == '__main__':
     args = argparser.parse_args()
 
     configparser = QuickSyncConfigParser()
-    configparser.read(args.configfile)
+
+    logging.debug('Using %s as config file', args.configfile)
+    configparser.readfp(args.configfile)
 
     do_sync(configparser.get_folders())
  

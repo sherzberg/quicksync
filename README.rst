@@ -43,5 +43,5 @@ Then to sync the folders, execute this:
 
 ::
 
-    $ bin/quicksync ~/folders-to-sync.qs
+    $ bin/quicksync -c ~/folders-to-sync.qs
 
