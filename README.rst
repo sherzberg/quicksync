@@ -27,6 +27,17 @@ Features (that currently work):
 
 * Multi-folder sync (locally mounted folders only)
 
+Installation
+============
+
+Use this method unless you are using pip. If you are using pip, you probably
+know how to install this...
+
+::
+    $ git clone git@github.com:whelmingbytes/quicksync.git
+    $ cd quicksync
+    $ python setup.py install
+
 Usage
 =====
 
@@ -43,5 +54,5 @@ Then to sync the folders, execute this:
 
 ::
 
-    $ bin/quicksync -c ~/folders-to-sync.cfg
+    $ quicksync -c ~/folders-to-sync.cfg
 
