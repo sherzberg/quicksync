@@ -34,6 +34,7 @@ Use this method unless you are using pip. If you are using pip, you probably
 know how to install this...
 
 ::
+
     $ git clone git@github.com:whelmingbytes/quicksync.git
     $ cd quicksync
     $ python setup.py install
