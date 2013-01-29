@@ -30,10 +30,12 @@ Features (that currently work):
 Usage
 =====
 
+The configuration file is like an INI file. More to come later 
 Create a file called ~/folders-to-sync.qs with these contents:
 
 ::
 
+    [folders]
     /path/to/folder/to/sync;/path/to/folder/to/sync/to
     /another/path/to/folder/to/sync;/another/path/to/folder/to/sync/to
 
@@ -41,5 +43,5 @@ Then to sync the folders, execute this:
 
 ::
 
-    $ quicksync ~/folders-to-sync.qs
+    $ bin/quicksync ~/folders-to-sync.qs
 
