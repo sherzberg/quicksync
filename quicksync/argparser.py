@@ -15,9 +15,8 @@ class QuickSyncArgumentParser(ArgumentParser):
 
         self.add_argument(
                 '-c',
-                '--configfile',
-                type=argparse.FileType('r'),
-                default='quicksync.cfg',
+                dest='configfile',
+                type=file,
                 help='''config file to read sync info from'''
                 )
         self.add_argument(
