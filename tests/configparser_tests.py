@@ -1,7 +1,7 @@
 import unittest
 import io
 
-from quicksync.configparser import QuickSyncConfigParser
+from quicksync import QuickSyncConfigParser
 
 sample_ini='''
 [config]

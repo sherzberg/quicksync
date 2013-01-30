@@ -2,7 +2,7 @@ import unittest
 import uuid
 import argparse
 
-from quicksync.argparser import QuickSyncArgumentParser
+from quicksync import QuickSyncArgumentParser
 
 class QuickSyncArgumentParserTest(unittest.TestCase):
   
