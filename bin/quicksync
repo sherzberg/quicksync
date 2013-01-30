@@ -14,14 +14,6 @@ RSYNC_CMD = 'rsync %(OPTIONS)s %(FROM)s %(TO)s'
 
 IS_WINDOWS = platform.uname()[0]=='Windows'
 
-def get_folders(filename):
-    folders = []
-    fh = open(filename,'r')
-    for line in fh.readlines():
-        l = line.split(FOLDER_SEP)
-        folders.append((fix_folder(l[0].strip()), fix_folder(l[1].strip())))
-    return folders
-
 def do_sync(folders):
     for tup in folders:
         f, t = tup[0], tup[1]
@@ -46,7 +38,6 @@ if __name__ == '__main__':
 
     configparser = QuickSyncConfigParser()
 
-    logging.debug('Using %s as config file', args.configfile)
     configparser.readfp(args.configfile)
 
     do_sync(configparser.get_folders())

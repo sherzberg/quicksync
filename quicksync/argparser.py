@@ -1,3 +1,4 @@
+import argparse
 from argparse import ArgumentParser
 
 #_parser = argparse.ArgumentParser(description='This program will sync two folders.')
@@ -15,11 +16,12 @@ class QuickSyncArgumentParser(ArgumentParser):
         self.add_argument(
                 '-c',
                 '--configfile',
+                type=argparse.FileType('r'),
                 default='quicksync.cfg',
-                type=file,
                 help='''config file to read sync info from'''
                 )
         self.add_argument(
+                '-s',
                 '--simulate',
                 action='store_true',
                 help='''Simulates the sync, does not actually do folder
