@@ -1,3 +1,5 @@
+.. image:: https://travis-ci.org/whelmingbytes/quicksync.png?branch=master
+
 ================
 quicksync
 ================
@@ -65,4 +67,3 @@ Then to sync the folders, execute this:
 
     $ quicksync -c ~/folders-to-sync.cfg
 
-.. image:: https://travis-ci.org/whelmingbytes/quicksync.png?branch=master
