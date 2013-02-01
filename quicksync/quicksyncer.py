@@ -1,6 +1,5 @@
 
 import logging
-import os, sys
 import subprocess
 
 from argparser import QuickSyncArgumentParser
@@ -10,19 +9,24 @@ FOLDER_SEP = ';'
 RSYNC_OPTIONS = '-v -r -a --exclude=.svn --exclude=*.qs'
 RSYNC_CMD = 'rsync %(OPTIONS)s %(FROM)s %(TO)s'
 
+
 class QuickSyncer():
 
     def __init__(self):
-        logging.basicConfig(level=logging.DEBUG)
+        logging.basicConfig(level=logging.DEBUG,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+                            )
         self.config_parser = QuickSyncConfigParser()
         self.arg_parser = QuickSyncArgumentParser()
 
     def run(self):
+        logging.debug('Starting Sync')
         args = self.arg_parser.parse_args()
 
         self.config_parser.readfp(args.configfile)
 
         self.do_sync(self.config_parser.get_folders())
+        logging.debug('Sync Complete')
 
     def do_sync(self, folders):
         for tup in folders:
@@ -33,5 +37,4 @@ class QuickSyncer():
             logging.debug('-' * 30)
 
     def build_command(self, f, t):
-        return RSYNC_CMD %{'FROM':f, 'TO':t, 'OPTIONS': RSYNC_OPTIONS}
-
+        return RSYNC_CMD % {'FROM': f, 'TO': t, 'OPTIONS': RSYNC_OPTIONS}
