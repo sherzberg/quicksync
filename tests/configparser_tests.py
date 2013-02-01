@@ -9,7 +9,7 @@ stuff=value
 other=nextvalue
 [folders]
 /folder1;/myfolder1
-/folder2;/myfolder2
+/Folder2;/MyFolder2
 '''
 
 class TestConfigParser(unittest.TestCase):
@@ -27,8 +27,8 @@ class TestConfigParser(unittest.TestCase):
         self.assertEqual('/myfolder1', folder1[1])
 
         folder2 = result[1]
-        self.assertEqual('/folder2', folder2[0])
-        self.assertEqual('/myfolder2', folder2[1])
+        self.assertEqual('/Folder2', folder2[0])
+        self.assertEqual('/MyFolder2', folder2[1])
 
     def test_get_config(self):
         cp = QuickSyncConfigParser()
