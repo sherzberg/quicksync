@@ -1,5 +1,7 @@
 .. image:: https://travis-ci.org/whelmingbytes/quicksync.png?branch=master
 
+.. footer:: https://github.com/whelmingbytes/quicksync
+
 ================
 quicksync
 ================
