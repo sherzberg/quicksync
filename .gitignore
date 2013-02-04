@@ -1,3 +1,4 @@
 *.qs
 *.cfg
 *.pyc
+*egg-info
