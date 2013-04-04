@@ -1,9 +1,11 @@
 .. image:: https://travis-ci.org/whelmingbytes/quicksync.png?branch=master
 
+.. footer:: https://github.com/whelmingbytes/quicksync
+
 ================
 quicksync
 ================
-v.1 - 2012-04-06
+v.1 - 2013-02-01
 ----------------
 
 This is a simple command line wrapper application that aids in syncing folders using
